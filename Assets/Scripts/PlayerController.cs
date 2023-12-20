@@ -8,11 +8,16 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
     float speed = 10.0f;
-    
+     public ParticleSystem explosionParticle;
+    public ParticleSystem fireworksParticle;
+    AudioSource playerAudio; 
+    public AudioClip explodeSound;
+    private bool gameOver; 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,9 +28,18 @@ public class PlayerController : MonoBehaviour
         
         forwardInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-
-      
-   
-    
     }
+ private void OnCollisionEnter(Collision other)
+ {
+    if (other.gameObject.CompareTag("BadSnack"))
+    {
+            explosionParticle.Play();
+            playerAudio.PlayOneShot(explodeSound, 1.0f);
+            gameOver = true;
+            Destroy(other.gameObject);
+        }
+ }
+
+  
+
 }

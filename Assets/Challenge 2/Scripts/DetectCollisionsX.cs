@@ -9,4 +9,13 @@ public class DetectCollisionsX : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+     void Update()
+    {
+        if (transform.position.z < lowerBound)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+        }
+    }
 }
