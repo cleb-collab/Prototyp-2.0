@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GoodSnack
   - BadSnack
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Bone
+  - Enemy
+  - Player
   - 
   - 
   - 

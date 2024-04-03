@@ -22,7 +22,7 @@ private float spawnInterval = 1.5f;
 
     void SpawnRandomSnack()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-6, 4), 10, Random.Range(-4, 6));
+        Vector3 spawnPos = new Vector3(Random.Range(-20, 20), 0, 18);
 
             int animalIndex = Random.Range(0,animalPrefabs.Length);
 

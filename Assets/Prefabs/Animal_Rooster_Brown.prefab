@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339678264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Tail_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339665630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_ROOTSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339610740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_l_Leg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339676980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_l_Leg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339664290}
   - component: {fileID: 1447569223326268648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Duck_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339686418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Tail_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339663758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Neck_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339636598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Neck_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,9 +332,11 @@ GameObject:
   - component: {fileID: 1447569223339677670}
   - component: {fileID: 1447569223330391686}
   - component: {fileID: 1881177204631520783}
-  m_Layer: 0
+  - component: {fileID: -6989983948772974509}
+  - component: {fileID: 8791440596896353790}
+  m_Layer: 8
   m_Name: Animal_Rooster_Brown
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,6 +395,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!65 &-6989983948772974509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447569223339857750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.834425, y: 18.842417, z: 1}
+  m_Center: {x: -0.040631294, y: 8.921206, z: 0}
+--- !u!114 &8791440596896353790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447569223339857750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d787efde5ad4dddb055408161ce29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447569223339860900
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339644694}
   - component: {fileID: 1447569223326193824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Chicken_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339651360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_r_Leg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339633606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_l_Leg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339655990}
   - component: {fileID: 1447569223326240184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Duck_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339672462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_l_Leg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339691072}
   - component: {fileID: 1447569223326199138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Rooster_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339661712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Tail_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339690172}
   - component: {fileID: 1447569223326258056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Chicken_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339608076}
   - component: {fileID: 1447569223326191818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Rooster_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,7 +1057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339696942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_r_Leg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339703266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_r_Leg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,7 +1119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447569223339696538}
   - component: {fileID: 1447569223326181760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Animals_Duck_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339626394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_r_Leg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339667070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_r_Leg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339690018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Neck_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339716266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_SHJntGrp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339693772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_l_Leg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447569223339700412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChickenRig_Head_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

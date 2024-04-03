@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectCollisionsX : MonoBehaviour
 {
-
+public float lowerBound;
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);

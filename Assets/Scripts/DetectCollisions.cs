@@ -5,13 +5,14 @@ using UnityEngine;
 public class DetectCollisions : MonoBehaviour
 {
 
-    float topBound;
-    float lowerBound;
+    float topBound = 22;
+    float lowerBound = -20;
+    PlayerController player;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -30,7 +31,13 @@ public class DetectCollisions : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            player.score += 1;
+            Debug.Log("Score " + player.score);
+        }
+
     }
 }

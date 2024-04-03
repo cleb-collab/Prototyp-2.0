@@ -6,40 +6,52 @@ public class PlayerController : MonoBehaviour
 {
     public float xRange = 10;
     private float horizontalInput;
-    private float forwardInput;
+    private float verticalInput; 
     float speed = 10.0f;
-     public ParticleSystem explosionParticle;
-    public ParticleSystem fireworksParticle;
-    AudioSource playerAudio; 
-    public AudioClip explodeSound;
+    public GameObject projectilePrefab;
+
+    public int health = 3;
+  
     private bool gameOver; 
+
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerAudio = GetComponent<AudioSource>();
+        Debug.Log("Lives " + health);
+        Debug.Log("Score " + score);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+		{
+			// Launch a projectile from the player
+			Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+		}
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        
-        forwardInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
- private void OnCollisionEnter(Collision other)
- {
-    if (other.gameObject.CompareTag("BadSnack"))
+     void OnTriggerEnter(Collider collision)
     {
-            explosionParticle.Play();
-            playerAudio.PlayOneShot(explodeSound, 1.0f);
-            gameOver = true;
-            Destroy(other.gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (health < 1)
+            {
+                health = 0;
+                Debug.Log("Game Over!");
+            }else
+            {
+                health -= 1;
+                Destroy(collision.gameObject);
+                Debug.Log("Lives " + health);
+            }
+               
         }
- }
-
-  
-
+    }
+ 
 }
